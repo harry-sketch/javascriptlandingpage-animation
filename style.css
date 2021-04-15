@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+*{
+    margin: 0px;
+    padding:0px;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+
+nav{
+    display: flex;
+    min-height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7952b3;
+}
+
+.nav-links{
+    width:40%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-links li{
+    list-style: none;
+    color:#ffe484;
+}
+.nav-links li a{
+    color:#ffe484;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+#logo h2{
+    color:#ffe484;
+    letter-spacing: 2px;
+}
+
+#hamburger{
+    display: none;
+}
+#hamburger div{
+    cursor: pointer;
+    width:1rem;
+    margin:2px;
+    height:2px;
+    background-color: #ffe484;
+}
+
+
+section{
+    width:100%;
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcase{
+    width:100%;
+    height:90vh;
+    position: relative;
+}
+
+.showcase img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.slider{
+    position: absolute;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    background-color: #7952b3;
+    z-index:-1
+}
+
+.headline{
+    position: absolute;
+    top:30%;
+    left:10%;
+    color:#ffe484;
+    transform: translate(0%, -30%);
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
+@media only screen  and (max-width:886px){
+    .nav-links{
+        width:60%;
+    }
+}
+
+
+@media only screen  and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        z-index:3;
+        position: absolute;
+        height:90vh;
+        top:10vh;
+        right:0;
+        background-color: #7952b3;
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+        
+    }
+
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .toggle  .line1{
+        transform: rotate(-45deg) translate(-4px,2px);
+    }
+    .toggle  .line2{
+      opacity: 0;
+    }
+    .toggle  .line3{
+        transform: rotate(45deg) translate(-4px,-2px);
+    }
+}
+
